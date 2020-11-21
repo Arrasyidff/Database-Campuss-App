@@ -1,0 +1,26 @@
+<%- include("partials/head.ejs") %>
+
+<h1>Hello World</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birth Year</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
+            <tr>
+                <td><%= data[i].first_name %></td>
+                <td><%= data[i].gender %></td>
+                <td><%= data[i].birth_year %></td>
+                <td><%= data[i].image %></td>
+            </tr>
+        <%  } %>
+    </tbody>
+</table>
+
+<%- include("partials/foot.ejs") %>
